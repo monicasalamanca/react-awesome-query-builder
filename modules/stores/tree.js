@@ -19,7 +19,7 @@ const hasChildren = (tree, path) => tree.getIn(expandTreePath(path, 'children1')
  * @param {object} properties
  */
 const addNewGroup = (state, path, properties, config) => {
-    //console.log("Adding group");
+    console.log("Adding group");
     const groupUuid = uuid();
     state = addItem(state, path, 'group', groupUuid, defaultGroupProperties(config).merge(properties || {}));
 
